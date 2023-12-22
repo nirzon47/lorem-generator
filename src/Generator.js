@@ -74,22 +74,24 @@ const generator = (limit) => {
 	const sentence = []
 
 	for (let i = 0; i < limit; i++) {
+		const paragraph = []
 		for (let j = 0; j < 40; j++) {
 			if (i === 0) {
-				sentence.push(
+				paragraph.push(
 					'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
 				)
 				break
 			}
 
-			sentence.push(words[Math.floor(Math.random() * words.length)] + ' ')
+			paragraph.push(words[Math.floor(Math.random() * words.length)] + ' ')
 		}
-		sentence.push('\n \n')
+		paragraph.push('\n\n')
+		sentence.push(paragraph)
 	}
 
-	return sentence.join('')
+	return sentence
 }
 
-console.log(generator(10))
+console.log(generator(5))
 
 export default generator
