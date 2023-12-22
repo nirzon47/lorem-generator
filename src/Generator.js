@@ -92,6 +92,4 @@ const generator = (limit) => {
 	return sentence
 }
 
-console.log(generator(5))
-
 export default generator
