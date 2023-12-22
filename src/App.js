@@ -12,6 +12,11 @@ const App = () => {
 		setLoremText(sentence)
 	}
 
+	const copyToClipboard = () => {
+		navigator.clipboard.writeText(document.getElementById('lorem').textContent)
+		alert('Copied to clipboard!')
+	}
+
 	return (
 		<div className='min-h-screen w-screen bg-green-50 p-12'>
 			<h1 className='text-3xl font-bold mb-8 text-center'>Lorem Generator</h1>
@@ -25,6 +30,11 @@ const App = () => {
 						name='Generate'
 						twclass='bg-blue-400 hover:bg-blue-500'
 						onClick={generateLorem}
+					/>
+					<Button
+						name='Copy to Clipboard'
+						twclass='bg-pink-400 hover:bg-pink-500'
+						onClick={copyToClipboard}
 					/>
 				</div>
 			</div>
