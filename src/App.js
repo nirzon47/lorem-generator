@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Inputs from './Inputs'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	return (
+		<div className='min-h-screen w-screen bg-green-50 p-12'>
+			<h1 className='text-3xl font-bold mb-8 text-center'>Lorem Generator</h1>
+			<div className='flex gap-4 items-center flex-col'>
+				<p className='text-lg'>Enter the number of paragraphs you want</p>
+				<Inputs />
+				<button className='bg-blue-400 rounded-md hover:bg-blue-500 duration-150 py-1 px-2 mb-8 font-bold'>
+					Generate
+				</button>
+			</div>
+		</div>
+	)
 }
-
-export default App;
+export default App
